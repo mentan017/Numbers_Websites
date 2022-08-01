@@ -1,8 +1,8 @@
 # Prime_Numbers_Website
 Small webpages that solve problems related to prime numbers
 
-In the first app, when trying to find the first n prime numbers, it works fine until 10 000, then it starts to be slow because the computer need to display all the 
-results on the screen. Therefore, when searching for 10 000+ prime numbers, it is recommended to comment out the last part of the GetPrimes function.
+In the first app, when trying to find the first n prime numbers, it works fine until 7500, then it starts to be slow because the computer need to display all the 
+results on the screen. Therefore, when searching for 7500+ prime numbers, it is recommended to comment out the last part of the GetPrimes function.
 It should look like this:
 
 [...]
@@ -12,7 +12,7 @@ console.log(primes);
 }*/
 [...]
 
-If you want to get the last number when trying to find more than 10 000 prime numbers, you can do the following modification :
+If you want to get the last number when trying to find more than 7500 prime numbers, you can do the following modification :
 
 [...]
 console.log(primes[totalPrimes-1]);
