@@ -15,7 +15,7 @@ console.log(primes);
 If you want to get the last number when trying to find more than 10 000 prime numbers, you can do the following modification :
 
 [...]
-console.log(primes[totalPrimes]);
+console.log(primes[totalPrimes-1]);
 [...]
 
 If there are any questions, contact me at mentan017@gmail.com
