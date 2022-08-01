@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <div class="link">
+        <a href="./IsPrime.html">Check a prime number</a>
+    </div>
+    <p id="TextPrompt">How many prime numbers do you want?</p>
+    <input id="NumberOfPrimesInput" type="number" min="0">
+    <div id="ButtonContainer">
+        <button onclick="GetPrimes()">Calculate</button>
+    </div>
+    <div id="Results">
+
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+    <script>
+        document.getElementById("NumberOfPrimesInput").addEventListener("keypress", function(e){
+            if(e.keyCode == 13) GetPrimes();
+        });
+    </script>
+</body>
+</html>
