@@ -5,10 +5,16 @@ function GetPrimes(){
         var primes = [2];
         var currentNumber = 3;
         while(primes.length < totalPrimes){
-            var IsNumberPrime = (IsPrime(currentNumber))[0];
-            if(IsNumberPrime == true) primes.push(currentNumber);
-            currentNumber = currentNumber + 2;
+            var IsPrime = true;
+            var i=1;
+            while((primes[i] < Math.floor(Math.sqrt(currentNumber))+1) && (IsPrime == true)){
+                if((currentNumber%primes[i]) == 0) IsPrime = false;
+                i++;
+            }
+            if(IsPrime == true) primes.push(currentNumber);
+            currentNumber = currentNumber+2;
         }
+        console.log(primes);
         for(var i=0; i<primes.length; i++){
             document.getElementById("Results").innerHTML = document.getElementById("Results").innerHTML + `<p>${primes[i]}</p>`
         }
