@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./style.css">
     <title>Is Prime?</title>
 </head>
 <body>
-    <div class="link">
-        <a href="./index.html">Get Prime Numbers</a>
+    <div class="DropdownMenuContainer">
+        <img src="./Images/menu.png" alt="Menu image" id="MenuImg">
+        <div id="DropdownMenu" class="dropdown-content">
+            <a href="./index.html">Get prime numbers</a>
+            <a href="./IsPrime.html">Check a prime number</a>
+            <a href="./FibonacciSequence.html">Get the Fibonacci sequence</a>
+        </div>
     </div>
-    <p id="TextPrompt">Is your number prime?</p>
-    <input id="PrimeNumberInput" type="number" min="0">
-    <div id="ButtonContainer">
-        <button onclick="IsNumberPrime()">Calculate</button>
+    <div class="MainContainer">
+        <p class="TextPrompt">Is your number prime?</p>
+        <input id="PrimeNumberInput" type="number" min="0">
+        <div class="ButtonContainer">
+            <button onclick="IsNumberPrime()">Calculate</button>
+        </div>
+        <div id="Results">
+        </div>
     </div>
-    <div id="Results">
-    </div>
+    <script type="text/javascript" src="./menu.js"></script>
     <script type="text/javascript" src="./script.js"></script>
     <script>
         document.getElementById("PrimeNumberInput").addEventListener("keypress", function(e){

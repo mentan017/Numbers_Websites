@@ -39,3 +39,14 @@ function IsPrime(Number){
     }
     return [IsPrime, i-1];
 }
+function GetFibonacciSequence(){
+    document.getElementById("Results").innerHTML = "";
+    var SequenceLength = parseInt(document.getElementById("NumbersForSequenceInput").value);
+    if(SequenceLength != ""){
+        var Sequence = [0, 1];
+        for(var i=1; i<SequenceLength+1; i++){
+            Sequence.push(Sequence[i-1] + Sequence[i]);
+            document.getElementById("Results").innerHTML = document.getElementById("Results").innerHTML + `<p>${Sequence[i]}</p>`
+        }
+    }
+}

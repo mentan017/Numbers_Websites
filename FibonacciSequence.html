@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Prime Numbers</title>
+    <title>Fibonacci Sequence</title>
 </head>
 <body>
     <div class="DropdownMenuContainer">
@@ -18,10 +18,10 @@
         </div>
     </div>
     <div class="MainContainer">
-        <p class="TextPrompt">How many prime numbers do you want?</p>
-        <input id="NumberOfPrimesInput" type="number" min="0">
+        <p class="TextPrompt">How many numbers do you want from the Fibonacci Sequence?</p>
+        <input id="NumbersForSequenceInput" type="number" min="0">
         <div class="ButtonContainer">
-            <button onclick="GetPrimes()">Calculate</button>
+            <button onclick="GetFibonacciSequence()">Calculate</button>
         </div>
         <div id="Results">
         </div>
@@ -29,9 +29,9 @@
     <script type="text/javascript" src="./menu.js"></script>
     <script type="text/javascript" src="./script.js"></script>
     <script>
-        document.getElementById("NumberOfPrimesInput").addEventListener("keypress", function(e){
-            if(e.keyCode == 13) GetPrimes();
-        });
+        document.getElementById("NumbersForSequenceInput").addEventListener("keypress", function(e){
+            if(e.keyCode == 13) GetFibonacciSequence();
+        })
     </script>
 </body>
 </html>
