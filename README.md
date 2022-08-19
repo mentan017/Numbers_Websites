@@ -25,5 +25,28 @@ This app will check if the number entered is a prime number. If it's not a prime
 ## Fibonacci Sequence
 This app will display the first n numbers of the Fibonacci Sequence. Due to floating point error, from 79 numbers, the app will lose precision in the last digits.
 
+##FizzBuzz
+This app doesn't have any user interface. 
+This app print all the numbers from 1 to n, but when a number is multiple of 3, it prints Fizz, when it's a multiple of 5, it prints Buzz, and when it's a multiple of 3 and 5, it prints FizzBuzz.
+To run the program, you can type FizzBuzz(n) in the console of dev tools (F12), where n is the amount of numbers you want to display in the console.
+
+##C++ Folder
+This is a folder with c++ applications. They are not linked to the web pages
+
+###String to Number
+This app converts a string (word) into a number. The logic is the following:
+a=1
+z=26
+aa=27
+az=52
+
+For example, hello = 3752127
+To run the program, execute the StringToNumber.exe file, and choose the mode 1.
+Your input can only container characters from the english alphabet. It cannot contain upper case characters.
+
+###Number to String
+This app converts a number into a string following the logic above
+To run the program, execute the StringToNumber.exe file, and choose the mode 2
+Your input has to be an integer ranging from 0 to 18,446,744,073,709,551,615
 
 If there are any questions, contact me at mentan017@gmail.com
