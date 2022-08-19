@@ -40,13 +40,13 @@ z=26
 aa=27
 az=52
 
-For example, hello = 3752127
-To run the program, execute the StringToNumber.exe file, and choose the mode 1.
+For example, hello = 3752127.
+To run the program, execute the StringToNumber.exe file in the cmd, and choose the mode 1.
 Your input can only container characters from the english alphabet. It cannot contain upper case characters.
 
 ### Number to String
-This app converts a number into a string following the logic above
-To run the program, execute the StringToNumber.exe file, and choose the mode 2
+This app converts a number into a string following the logic above.
+To run the program, execute the StringToNumber.exe file, and choose the mode 2.
 Your input has to be an integer ranging from 0 to 18,446,744,073,709,551,615
 
 If there are any questions, contact me at mentan017@gmail.com
