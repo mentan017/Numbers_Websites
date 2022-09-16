@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Fibonacci Sequence</title>
+    <title>Large Numbers Addition</title>
 </head>
 <body>
     <div class="DropdownMenuContainer">
@@ -20,20 +20,17 @@
         </div>
     </div>
     <div class="MainContainer">
-        <p class="TextPrompt">How many numbers do you want from the Fibonacci Sequence?</p>
-        <input id="NumbersForSequenceInput" type="number" min="0">
+        <p class="TextPrompt">What numbers do you want to add?</p>
+        <input id="AdditionNumber1" type="number" min="0">
+        <p class="TextPrompt">+</p>
+        <input id="AdditionNumber2" type="number" min="0">
         <div class="ButtonContainer">
-            <button onclick="GetFibonacciSequence()">Calculate</button>
+            <button onclick="AddLargeNumbers()">Calculate</button>
         </div>
         <div id="Results">
         </div>
     </div>
     <script type="text/javascript" src="./menu.js"></script>
     <script type="text/javascript" src="./script.js"></script>
-    <script>
-        document.getElementById("NumbersForSequenceInput").addEventListener("keypress", function(e){
-            if(e.keyCode == 13) GetFibonacciSequence();
-        });
-    </script>
 </body>
 </html>

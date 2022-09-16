@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fizz Buzz Question</title>
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fizz Buzz</title>
 </head>
 <body>
-    <h1>Check the console in developer tools</h1>
-    <script type="text/javascript" src="./FizzBuzz.js"></script>
+    <div class="DropdownMenuContainer">
+        <img src="Images/menu.png" alt="Menu Image" id="MenuImg">
+        <div id="DropdownMenu" class="dropdown-content">
+            <a href="./index.html">Get prime numbers</a>
+            <a href="./IsPrime.html">Check a prime number</a>
+            <a href="./FibonacciSequence.html">Get the Fibonacci sequence</a>
+            <a href="./FizzBuzz.html">FizzBuzz</a>
+            <a href="./LargeNumbersAddition.html">Add Large Numbers</a>
+        </div>
+    </div>
+    <div class="MainContainer">
+        <p class="TextPrompt">How many numbers do you want to count?</p>
+        <input type="number" id="NumberFizzBuzzInput" min="0">
+        <div class="ButtonContainer">
+            <button onclick="FizzBuzz()">Calculate</button>
+        </div>
+        <div id="Results">
+        </div>
+    </div>
+    <script type="text/javascript" src="./menu.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script>
+        document.getElementById("NumberFizzBuzzInput").addEventListener("keypress", function(e){
+            e.stopImmediatePropagation();
+            if(e.keyCode == 13) FizzBuzz();
+        });
+    </script>
 </body>
 </html>
