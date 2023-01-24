@@ -5,19 +5,20 @@ function GetPrimes(){
         var primes = [2];
         var currentNumber = 3;
         while(primes.length < totalPrimes){
-            var IsPrime = true;
+            var IsPrimeNumber = true;
             var i=1;
-            while((primes[i] < Math.floor(Math.sqrt(currentNumber))+1) && (IsPrime == true)){
-                if((currentNumber%primes[i]) == 0) IsPrime = false;
+            while((primes[i] < Math.floor(Math.sqrt(currentNumber))+1) && (IsPrimeNumber == true)){
+                if((currentNumber%primes[i]) == 0) IsPrimeNumber = false;
                 i++;
             }
-            if(IsPrime == true) primes.push(currentNumber);
+            if(IsPrimeNumber == true) primes.push(currentNumber);
             currentNumber = currentNumber+2;
         }
         console.log(primes);
-        for(var i=0; i<primes.length; i++){
+        console.log(primes[totalPrimes-1]);
+        /*for(var i=0; i<primes.length; i++){
             document.getElementById("Results").innerHTML += `<p>${primes[i]}</p>`
-        }
+        }*/
     }
 }
 function IsNumberPrime(){

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>PI Trainer</title>
+</head>
+<body>
+    <div class="DropdownMenuContainer">
+        <img src="./Images/menu.png" alt="Menu image" id="MenuImg">
+        <div id="DropdownMenu" class="dropdown-content">
+            <a href="./index.html">Get prime numbers</a>
+            <a href="./IsPrime.html">Check a prime number</a>
+            <a href="./FibonacciSequence.html">Get the Fibonacci sequence</a>
+            <a href="./FizzBuzz.html">FizzBuzz</a>
+            <a href="./LargeNumbersAddition.html">Add Large Numbers</a>
+        </div>
+    </div>
+    <div class="MainContainer">
+        <p class="TextPrompt">PI trainer (110 decimals)</p>
+        <textarea id="UserInput" rows="5" columns="10" style="font-size: 28px; border-radius: 15px; border: 2px solid; padding: 5px;"></textarea>
+        <div></div>
+    </div>
+    <script type="text/javascript" src="menu.js"></script>
+    <script>
+        var PINumber = "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651";
+        document.getElementById("UserInput").addEventListener("input", function(e){
+            var Input = document.getElementById("UserInput").value;
+            if(PINumber.includes(Input)){
+                document.getElementById("UserInput").style.color = "green";
+            }else{
+                document.getElementById("UserInput").style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
