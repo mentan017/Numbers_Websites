@@ -102,3 +102,51 @@ function RandomNumber(){
         document.getElementById("Results").innerHTML = `<p>${random}</p>`;
     }
 }
+function GetPgcdPpcm(){
+    var number1 = parseInt(document.getElementById('PGCD-1').value);
+    var primeFactors1 = GetFactors(number1, []);
+    var number2 = parseInt(document.getElementById('PGCD-2').value);
+    var primeFactors2 = GetFactors(number2, []);
+    var PGCD = GetPGCD(primeFactors1, primeFactors2);
+    var PPCM = (number1*number2)/PGCD;
+    document.getElementById('Results').innerHTML = (`<p>PGCD: ${PGCD}, PPCM: ${PPCM}</p>`);
+}
+function GetFactors(number, factors){
+    var i=2;
+    var found = false;
+    while(i<Math.ceil(Math.sqrt(number))+1){
+        if(number%i == 0){
+            factors.push(i);
+            found = true;
+            if(number > 2) GetFactors(number/i, factors);
+            i = number;
+        }
+        i++;
+    }
+    if(!found) factors.push(number);
+    return(factors);
+}
+function GetPGCD(primes1, primes2){
+    var PGCD = 1;
+    while(primes1.length > 0){
+        var occurences1 = GetOccurences(primes1[0], primes1);
+        var occurences2 = GetOccurences(primes1[0], primes2);
+        if(occurences1 < occurences2) PGCD = PGCD*(Math.pow(primes1[0], occurences1));
+        else PGCD = PGCD*(Math.pow(primes1[0], occurences2));
+        primes2 = DeleteOccurences(primes1[0], primes2);
+        primes1 = DeleteOccurences(primes1[0], primes1);
+    }
+    return(PGCD);
+}
+function GetOccurences(element, array){
+    var i=0;
+    var j=0;
+    while(array[i] != element && i<array.length) i++;
+    while(array[i] == element) i++, j++;
+    return(j);
+}
+function DeleteOccurences(element, array){
+    var i=0;
+    while(array[i] == element) array.shift();
+    return(array);
+}
