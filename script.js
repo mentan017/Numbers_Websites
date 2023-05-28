@@ -150,3 +150,43 @@ function DeleteOccurences(element, array){
     while(array[i] == element) array.shift();
     return(array);
 }
+
+function InverseMatrix(M){
+    var com = [];
+    for(var i=0; i<M.length; i++){
+        var comLign = [];
+        for(var j=0; j<M[i].length; j++){
+            comLign.push(M[(i+2)%3][(j+2)%3]*M[(i+1)%3][(j+1)%3] - M[(i+2)%3][(j+1)%3]*M[(i+1)%3][(j+2)%3])
+        }
+        com.push(comLign);
+    }
+    var Tcom = [];
+    for(var i=0; i<com[0].length; i++) Tcom.push([com[0][i], com[1][i], com[2][i]]);
+    var Det = (-1)*(M[0][0]*(Tcom[0][0]) + M[0][1]*(Tcom[1][0]) + M[0][2]*(Tcom[2][0]));
+    var InvM = Tcom; // Tcom becomes linked to InvM -> If InvM changes, Tcom does too
+    for(var i=0; i<InvM.length; i++){
+        for(var j=0; j<InvM[i].length; j++){
+            InvM[i][j] = InvM[i][j]/(-Det);
+            if(Math.abs(InvM[i][j]) == 0) InvM[i][j] = 0;
+        }
+    }
+    console.log(InvM);
+}
+
+function ConwaySeries(init, length){
+    for(var i=0; i<length-1; i++){
+        var reps = [1];
+        var num = [init[0]];
+        for(var j=1; j<init.length; j++){
+            if(init[j] != num[num.length-1]){
+                reps.push(1); 
+                num.push(init[j]);
+            }else{
+                reps[reps.length-1]++;
+            }
+        }
+        init="";
+        for(var j=0; j<reps.length; j++) init+=`${reps[j]}${num[j]}`;
+        console.log(init);
+    }
+}
